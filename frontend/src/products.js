@@ -22,8 +22,8 @@ const products = [
     category: 'Electronics',
     price: 599.99,
     countInStock: 7,
-    rating: 4.0,
-    numReviews: 8,
+    rating: 4.5,
+    numReviews: 18,
   },
   {
     _id: '3',
