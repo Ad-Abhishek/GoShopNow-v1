@@ -1,0 +1,23 @@
+{
+  "name": "goshopnow",
+  "version": "1.0.0",
+  "description": "eCommerce application built with the MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ad-Abhishek/GoShopNow.git"
+  },
+  "author": "Abhishek Adhikari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ad-Abhishek/GoShopNow/issues"
+  },
+  "homepage": "https://github.com/Ad-Abhishek/GoShopNow#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
