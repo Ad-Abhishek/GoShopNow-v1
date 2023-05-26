@@ -36,6 +36,7 @@ const importData = async () => {
     }
   };
 
+// Destroy data
 const destroyData = async () => {
     try {
         await Order.deleteMany();
