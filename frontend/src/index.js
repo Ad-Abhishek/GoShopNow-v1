@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store'
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './asset/styles/bootstrap.custom.css';
 import './asset/styles/index.css';
 import App from './App';
