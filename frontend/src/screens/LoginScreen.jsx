@@ -12,33 +12,10 @@ const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-
-    const [login, { isLoading }] = useLoginMutation();
-
-    const { userInfo } = useSelector((state) => state.auth);
-
-    const { search } = useLocation();
-    const sp = new URLSearchParams(search);
-    const redirect = sp.get('redirect') || '/';
-
-    useEffect(() => {
-        if (userInfo) {
-            navigate(redirect);   
-        }
-    }, [userInfo, redirect, navigate]);
-
-    const submitHandler = async (e) => {
+    const submitHandler = (e) => {
         e.preventDefault();
-        try {
-            const res = await login({ email, password }).unwrap();
-            dispatch(setCredentials({...res, }));
-            navigate(redirect);
-        } catch (err) {
-            toast.error(err?.data?.message || err.error);
-        }
-    };
+        console.log('submit');
+    }
 
     return (
         <FormContainer>
@@ -65,16 +42,14 @@ const LoginScreen = () => {
                     ></Form.Control>    
                 </Form.Group>
 
-                <Button type='submit' variant='primary' className='mt-2' disabled={ isLoading }>
+                <Button type='submit' variant='primary' className='mt-2'>
                     Sign In
                 </Button>
-
-                { isLoading && <Loader /> }
             </Form>
 
             <Row className='py-3'>
                 <Col>
-                    New Customer? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
+                    New Customer? <Link to='/register'>Register</Link>
                 </Col>
             </Row>
         </FormContainer>
