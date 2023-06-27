@@ -1,5 +1,5 @@
 # GoShopNow
-An e-commerce web application-under development
+An e-commerce web application-under development.
 
 ----
 ## API Doc Reference
